@@ -55,7 +55,7 @@ namespace Industry.Tiles.Pipes
                     }
                 }
             }
-            Main.NewText("END");
+            Main.NewText("END " + start);
             return false;
         }
 

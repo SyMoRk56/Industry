@@ -1,5 +1,6 @@
 ﻿using Industry.Items;
 using Industry.Items.Materials;
+using Industry.Tiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -7,12 +8,13 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace Industry.Tiles
 {
-    public class BronzeMixerTile : ModTile
+    public class BronzeFurnace : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -36,23 +38,23 @@ namespace Industry.Tiles
         }
         public override bool RightClick(int i, int j)
         {
-            if(!CheckMultiblock(i, j, out var e))
+            if (!CheckMultiblock(i, j, out var e))
             {
-                Main.NewText("Bronze mixer error! " + e);
-                if(!ModTileEntity.ByPosition.TryGetValue(new Point16(i, j), out TileEntity entity))
+                Main.NewText("Bronze furnace error! " + e);
+                if (!ModTileEntity.ByPosition.TryGetValue(new Point16(i, j), out TileEntity entity))
                 {
-                    ModTileEntity.PlaceEntityNet(i, j, ModContent.TileEntityType<BronzeMixerEntity>());
+                    ModTileEntity.PlaceEntityNet(i, j, ModContent.TileEntityType<BronzeFurnaceEntity>());
 
                 }
                 return true;
             }
-            Main.NewText("Bronze mixer setuped");
+            Main.NewText("Bronze furnace setuped");
             return true;
         }
         public override void PlaceInWorld(int i, int j, Item item)
         {
             Main.NewText("Place entity");
-            ModTileEntity.PlaceEntityNet(i, j, ModContent.TileEntityType<BronzeMixerEntity>());
+            ModTileEntity.PlaceEntityNet(i, j, ModContent.TileEntityType<BronzeFurnaceEntity>());
         }
 
         public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
@@ -126,9 +128,6 @@ namespace Industry.Tiles
         private Chest GetOutputChest(int i, int j)
             => Main.chest[Chest.FindChest(i + 2, j - 3)];
 
-        
-
         #endregion
     }
-
 }

@@ -15,10 +15,17 @@ namespace Industry.Tiles.Pipes
 
         public override void Update()
         {
+            
             transferTimer++;
 
             if (transferTimer >= TransferRate)
             {
+                Tile tile = Framing.GetTileSafely(Position.X, Position.Y);
+
+                if (!tile.HasTile || (tile.TileType != ModContent.TileType<ItemPipeTile>() && tile.TileType != ModContent.TileType<ItemPipeInputTile>() && tile.TileType != ModContent.TileType<ItemPipeOutputTile>()))
+                {
+                    Kill(Position.X, Position.Y);
+                }
                 transferTimer = 0;
                 TryTransfer();
             }

@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Industry.Tiles.Pipes;
 using System.Net;
+using Terraria.DataStructures;
 
 namespace Industry.Tiles.Pipes
 {
@@ -13,9 +14,21 @@ namespace Industry.Tiles.Pipes
             Tile tile = Main.tile[x, y];
             return tile.HasTile && tile.TileType == ModContent.TileType<ItemPipeInputTile>();
         }
-
         public override void TryTransfer()
         {
+            Main.NewText("TryTransfer " + Position);
+            Tile tile = Framing.GetTileSafely(Position.X, Position.Y);
+            Main.NewText("ooo");
+            Main.NewText((!tile.HasTile || (tile.TileType != ModContent.TileType<ItemPipeTile>() && tile.TileType != ModContent.TileType<ItemPipeInputTile>() && tile.TileType != ModContent.TileType<ItemPipeOutputTile>())));
+            if (!tile.HasTile || (tile.TileType != ModContent.TileType<ItemPipeTile>() && tile.TileType != ModContent.TileType<ItemPipeInputTile>() && tile.TileType != ModContent.TileType<ItemPipeOutputTile>()))
+            {
+                if(TileEntity.ByPosition.TryGetValue(Position, out var value))
+                {
+                    TileEntity.ByPosition.Remove(Position);
+                }
+
+                
+            }
             if (TryGetChest(new Vector2(Position.X * 16, Position.Y * 16), out Chest chest))
             {
 

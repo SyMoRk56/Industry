@@ -28,4 +28,9 @@ Items: {
 		Tooltip: ""
 		DisplayName: Item Pipe Input Item
 	}
+
+	BronzeFurnaceItem: {
+		DisplayName: Bronze Furnace Item
+		Tooltip: ""
+	}
 }
