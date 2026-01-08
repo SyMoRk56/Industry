@@ -1,0 +1,12 @@
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\bin\Debug\net8.0\Industry.deps.json
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\bin\Debug\net8.0\Industry.dll
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\bin\Debug\net8.0\Industry.pdb
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.csproj.AssemblyReference.cache
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.AssemblyInfoInputs.cache
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.AssemblyInfo.cs
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.csproj.CoreCompileInputs.cache
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.dll
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\refint\Industry.dll
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.pdb
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\ref\Industry.dll

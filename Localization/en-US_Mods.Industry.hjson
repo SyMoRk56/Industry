@@ -1,0 +1,31 @@
+Items: {
+	BronzeBrickItem: {
+		Tooltip: ""
+		DisplayName: Bronze Brick Item
+	}
+
+	BronzeBar: {
+		Tooltip: ""
+		DisplayName: Bronze Bar
+	}
+
+	BronzeMixerItem: {
+		Tooltip: ""
+		DisplayName: Bronze Mixer Item
+	}
+
+	ItemPipeItem: {
+		DisplayName: Item Pipe Item
+		Tooltip: ""
+	}
+
+	ItemPipeOutputItem: {
+		Tooltip: ""
+		DisplayName: Item Pipe Output Item
+	}
+
+	ItemPipeInputItem: {
+		Tooltip: ""
+		DisplayName: Item Pipe Input Item
+	}
+}
