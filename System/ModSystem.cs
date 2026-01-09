@@ -9,30 +9,65 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Industry.Tiles.Blocks.Multiblocks.Content.Recipes;
+using static Industry.System.RecipeSystem;
 
-public class RecipeSystem : ModSystem
+namespace Industry.System
 {
-    public override void AddRecipes()
+    public class RecipeSystem : ModSystem
     {
-        
-    }
-
-    public override void PostAddRecipes()
-    {
-        foreach (Recipe recipe in Main.recipe)
+        public override void AddRecipes()
         {
-            if (recipe.createItem.type == ItemID.PlatinumBar || recipe.createItem.type == ItemID.GoldBar)
+
+        }
+
+        public override void PostAddRecipes()
+        {
+            foreach (Recipe recipe in Main.recipe)
             {
-                recipe.DisableRecipe();
-            }
-            if(recipe.createItem.type == ItemID.DemoniteBar || recipe.createItem.type == ItemID.CrimtaneBar)
-            {
-                recipe.DisableRecipe();
-            }
-            if (recipe.createItem.type == ItemID.MeteoriteBar)
-            {
-                recipe.DisableRecipe();
+                if (recipe.createItem.type == ItemID.PlatinumBar || recipe.createItem.type == ItemID.GoldBar)
+                {
+                    recipe.DisableRecipe();
+                }
+                if (recipe.createItem.type == ItemID.DemoniteBar || recipe.createItem.type == ItemID.CrimtaneBar)
+                {
+                    recipe.DisableRecipe();
+                }
+                if (recipe.createItem.type == ItemID.MeteoriteBar)
+                {
+                    recipe.DisableRecipe();
+                }
             }
         }
+        public static class BronzeFurnaceRecipes
+        {
+            public static readonly List<BasicItemToItemRecipe> Recipes =
+            new()
+                {
+                new BasicItemToItemRecipe
+                {
+                    Inputs =
+                    {
+                        [ItemID.CopperBar] = 3,
+                        [ItemID.TinBar] = 1
+                    },
+                    OutputItem = ModContent.ItemType<BronzeBar>(),
+                    OutputStack = 2,
+                    CraftTime = 180
+                },
+
+                new BasicItemToItemRecipe
+                {
+                    Inputs =
+                    {
+                        [ItemID.CopperOre] = 5
+                    },
+                    OutputItem = ItemID.CopperBar,
+                    OutputStack = 2,
+                    CraftTime = 120
+                },
+                };
+        }
     }
+
 }

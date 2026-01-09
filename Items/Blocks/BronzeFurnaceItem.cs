@@ -19,7 +19,7 @@ namespace Industry.Items.Blocks
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
 
-            Item.createTile = ModContent.TileType<Tiles.BronzeFurnace>();
+            Item.createTile = ModContent.TileType<Tiles.Blocks.Multiblocks.Content.BronzeFurnace>();
         }
     }
 }

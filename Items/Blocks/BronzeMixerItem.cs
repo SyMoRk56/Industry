@@ -19,7 +19,7 @@ namespace Industry.Items
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
 
-            Item.createTile = ModContent.TileType<Tiles.BronzeMixerTile>();
+            //Item.createTile = ModContent.TileType<Tiles.BronzeMixerTile>();
         }
     }
 }
