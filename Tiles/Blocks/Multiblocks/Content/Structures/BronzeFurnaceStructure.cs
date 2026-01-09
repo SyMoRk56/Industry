@@ -12,19 +12,39 @@ namespace Industry.Tiles.Blocks.Multiblocks.Content.Structures
             new MultiblockStructure(
                 new Dictionary<Point, int>
                 {
+
+
+
                     [new(-1, 0)] = ModContent.TileType<BronzeBrick>(),
                     [new(1, 0)] = ModContent.TileType<BronzeBrick>(),
+                    [new(-2, 0)] = ModContent.TileType<BronzeBrick>(),
+                    [new(-2, 0)] = ModContent.TileType<BronzeBrick>(),
 
                     [new(-2, -1)] = ModContent.TileType<BronzeBrick>(),
                     [new(-1, -1)] = ModContent.TileType<BronzeBrick>(),
                     [new(0, -1)] = ModContent.TileType<BronzeBrick>(),
                     [new(1, -1)] = ModContent.TileType<BronzeBrick>(),
                     [new(2, -1)] = ModContent.TileType<BronzeBrick>(),
+
+                    [new(-1, 1)] = TileID.RedBrick,
+                    [new(1, 1)] = TileID.RedBrick,
+                    [new(0, 1)] = TileID.RedBrick,
+                    [new(-2, 1)] = TileID.RedBrick,
+                    [new(-2, 1)] = TileID.RedBrick,
+
+                    [new(-1, -4)] = TileID.RedBrick,
+                    [new(1, -4)] = TileID.RedBrick,
+                    [new(0, -4)] = TileID.RedBrick,
+                    [new(-2, -4)] = TileID.RedBrick,
+                    [new(-2, -4)] = TileID.RedBrick,
+
+                    [new(0, -2)] = ModContent.TileType<BronzeBrick>(),
+                    [new(0, -3)] = ModContent.TileType<BronzeBrick>(),
                 },
                 new Dictionary<Point, int>
                 {
-                    [new(-2, -3)] = TileID.Containers, // input
-                    [new(1, -3)] = TileID.Containers  // output
+                    [new(-2, -3)] = ModContent.TileType<BronzeItemHatch>(), // input
+                    [new(1, -3)] = ModContent.TileType<BronzeItemHatch>()  // output
                 }
             );
     }

@@ -33,4 +33,16 @@ Items: {
 		DisplayName: Bronze Furnace Item
 		Tooltip: ""
 	}
+
+	BronzeItemHatchItem: {
+		DisplayName: Bronze Item Hatch Item
+		Tooltip: ""
+	}
+}
+
+Tiles: {
+	BronzeItemHatch: {
+		MapEntry0: Mods.Industry.Tiles.BronzeItemHatch.MapEntry0
+		MapEntry1: Mods.Industry.Tiles.BronzeItemHatch.MapEntry1
+	}
 }

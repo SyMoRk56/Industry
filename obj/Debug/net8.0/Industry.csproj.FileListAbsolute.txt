@@ -10,3 +10,4 @@ C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSourc
 C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\refint\Industry.dll
 C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.pdb
 C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\ref\Industry.dll
+C:\Users\armon\OneDrive\Документы\My Games\Terraria\tModLoader\ModSources\Industry\obj\Debug\net8.0\Industry.sourcelink.json

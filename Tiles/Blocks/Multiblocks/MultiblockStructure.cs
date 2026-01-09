@@ -30,7 +30,18 @@ namespace Industry.Tiles.Blocks.Multiblocks
                 Tile tile = Framing.GetTileSafely(originX + p.X, originY + p.Y);
                 if (!tile.HasTile || tile.TileType != type)
                 {
-                    error = $"Нарушен мультиблок ({p.X:+#;-#;0},{p.Y:+#;-#;0})";
+                    string actualName = tile.HasTile
+            ? TileID.Search.GetName(tile.TileType)
+            : "пусто";
+                    Main.NewText(type);
+                    string requiredName = TileID.Search.GetName(type);
+
+                    error =
+                        $"Нарушен мультиблок в точке " +
+                        $"({p.X:+#;-#;0},{p.Y:+#;-#;0})\n" +
+                        $"Ожидалось: {requiredName}\n" +
+                        $"Найдено: {actualName}";
+
                     return false;
                 }
             }
@@ -38,7 +49,7 @@ namespace Industry.Tiles.Blocks.Multiblocks
             foreach (var kv in RequiredChests)
             {
                 Point p = kv.Key;
-
+                var v = kv.Value;
                 int index = Chest.FindChest(originX + p.X, originY + p.Y);
                 if (index < 0)
                 {
@@ -46,7 +57,7 @@ namespace Industry.Tiles.Blocks.Multiblocks
                     return false;
                 }
 
-                if (Main.tile[originX + p.X, originY + p.Y].TileType != TileID.Containers)
+                if (Main.tile[originX + p.X, originY + p.Y].TileType != v)
                 {
                     error = "Неверный тип сундука";
                     return false;
